@@ -4,11 +4,11 @@ import math
 
 pygame.init()
 pygame.mixer.init()
-sound_success = pygame.mixer.Sound("success-videogame-sfx-423626.mp3")
+sound_success = pygame.mixer.Sound("Game.mp3")
 
 # ---- Fenêtre ----
-WIDTH, HEIGHT = 800, 600
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
+WIDTH, HEIGHT = screen.get_size()
 pygame.display.set_caption("Shapes & Colors")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 30)
@@ -305,3 +305,4 @@ def intro_screen():
 # ---- Lancer l'intro ----
 intro_screen()
 pygame.quit()
+
